@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make API</title>
+    <link rel="stylesheet" type="text/css" href="/menu.css">
+
+</head>
+
+<body>
+    
+<div class = 'bg'
+    <div class="container">
+        <h2 class="message">Please enter a name of an artist or an album</h2>
+
+
+        <div class="form">
+            <form class="no-widget">
+
+                <span class="value">Select an option</span>
+                <select name="menu" id="menu">
+                    <option value="">Click</option>
+                    <option value="form1">Artist</option>
+                    <option value="form2">Album</option>
+
+                </select>
+
+                <div class="select" id="select" role="listbox">
+                    <span class="value">Select an option</span>
+                    <ul class="optList hidden" role="presentation">
+                        <li class="option" data-value="orange" role="option" aria-selected="true">Click</li>
+                        <li class="option" data-value="green" role="option">Artist</li>
+                        <li class="option" data-value="blue" role="option">Album</li>
+                    </ul>
+                </div>
+            </form>
+
+            <form id="form1" method="post" action = '/' style="display:none;">
+                <label for="artist">Name of Artist</label><br> 
+                <input type="text" id="artist" name="artist"><br>  <!--Name attr are the keys in the req.body object on the server. -->
+                <input type="submit" value="Submit">
+            </form>
+            <form id="form2" method="post" action = '/' style="display:none;">
+                <label for="album">Name of Album</label>
+                <br>
+                <input type="text" id="album" name="album"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div  class = "button">
+            <span class="button-wrapper"><button id="hideButton">X</button></span>
+        </div>
+
+        <div class = "info" id = "info" style="color: black;">
+            <span id = "replace"><p>Your Info here</p></span>
+        </div>
+        
+    </div>
+</div>
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="displayInfo.js"></script>
+    
+</body>
+
+</html>

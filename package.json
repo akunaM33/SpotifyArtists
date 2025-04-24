@@ -1,0 +1,23 @@
+{
+  "name": "spotifyartists",
+  "version": "1.0.0",
+  "description": "User make request to Spotify to get artists' names/albums",
+  "repository": {
+    "type": "git",
+    "url": "spotifyArtists"
+  },
+  "license": "ISC",
+  "author": "vp",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "qs": "^6.14.0"
+  }
+}
