@@ -13,13 +13,14 @@ async function fetchData(form) {
             
     } catch (error) {
       info.textContent = error.message;
+      info.style.color = "red";
     }
   }
   const info = document.getElementById('info');
   async function processArtist(form) {
     try {
       const infoObj = await fetchData( form);
-                                              console.log(infoObj.name, infoObj.genres);
+                                             
       // Access properties of the object
       info.textContent = infoObj.name;
       const p1 = document.createElement("p");
@@ -31,6 +32,7 @@ async function fetchData(form) {
       img.alt = "Artist's photo";
       img.style.cssText ="width:100%; height: auto; margin: 0 auto;";
       info.appendChild(img);
+      info.style.color = 'black';
     // info.parentNode.insertBefore(img, info.nextSibling);
 
     } catch (error) {
@@ -41,7 +43,7 @@ async function fetchData(form) {
   async function processAlbum(form) {
     try {
       const infoObj = await fetchData( form);
-                                              console.log(infoObj.name, infoObj.artists[0].name);
+                                             
       // Access properties of the object
       info.textContent = infoObj.name;
 
@@ -89,8 +91,8 @@ async function fetchData(form) {
   
   const hideButton = document.getElementById('hideButton');
   const replace = document.getElementById('replace');
+
   hideButton.addEventListener('click', function () {
-    
     info.replaceChildren(replace);
-    
+    info.style.color = 'black';
   });
